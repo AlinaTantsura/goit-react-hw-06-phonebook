@@ -17,15 +17,15 @@ const Contacts = () => {
     const filtredContacts = getFiltredContacts(contacts, filter);
 
     return (
-        <ul>
-            {filtredContacts.map(({ name, id, number }) => (<Item key={id} id={id}>{name}: {number}   
-                <Button type='button'
-                    onClick={() => {
-                        Notify.success(`The contact '${name}' is successfully deleted`);
-                        return dispatch(deleteContact(id))
-                    }}>Delete</Button> </Item>
-            ))}
-        </ul>
+            <ul>
+                {filtredContacts.map(({ name, id, number }) => (<Item key={id} id={id}>{name}: {number}   
+                    <Button type='button'
+                        onClick={() => {
+                            Notify.success(`The contact '${name}' is successfully deleted`);
+                            return dispatch(deleteContact(id))
+                        }}>Delete</Button> </Item>
+                ))}
+            </ul>
     )
 }
 
